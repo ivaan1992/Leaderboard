@@ -1,19 +1,19 @@
 * {
+  margin-left: 16px;
   box-sizing: border-box;
 }
 
 header {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .score {
-  width: 20%;
+  width: 50vh;
 }
 
 #refresh {
-  height: 5vh;
-  width: 30%;
-  margin-left: 50px;
+width: 100px;
 }
 
 #form {
@@ -23,6 +23,7 @@ header {
 input {
   margin-bottom: 25px;
   width: 250px;
+  height: 5vh;
   border-radius: 5px;
 }
 
@@ -31,7 +32,7 @@ h3 {
 }
 
 #submit {
-  width: 100px;
-  margin-left: 150px;
-  height: 4vh;
+  width: 120px;
+  margin-left: 129px;
+  height: 6vh;
 }

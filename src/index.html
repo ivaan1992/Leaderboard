@@ -11,19 +11,23 @@
     <header>
         <h1>Leaderboard</h1>
     </header>
-    <main>
-      <section class="d-flex justify-content-start">
-        <div class="score d-flex justify-content-start" id="score">
-            <h2>Recent score</h2>
+    <main class="d-flex justify-content-start">
+      <section class="d-flex flex-column justify-content-start">
+        <div class="score d-flex justify-content-between">
+            <h3>Recent score</h3>
             <button type="button" id="refresh">Refresh</button>
         </div>
+        <div id="score" class="d-flex flex-column">
+        </div>
+      </section>
+      <section class="d-flex flex-column justify-content-end">
         <form id="form" class="d-flex flex-column">
             <h3>Add your score</h3>
             <input type="text" id="input-name" placeholder="Your name">
             <input type="number" id="input-number" placeholder="Your score">
             <button type="submit" id="submit">Submit</button>
         </form>
-      </section>
+      </section>  
     </main>
     <footer>
 
