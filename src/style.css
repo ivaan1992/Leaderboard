@@ -1,0 +1,38 @@
+* {
+  margin-left: 16px;
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.score {
+  width: 50vh;
+}
+
+#refresh {
+  width: 100px;
+}
+
+#form {
+  margin-left: 250px;
+}
+
+input {
+  margin-bottom: 25px;
+  width: 250px;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+h3 {
+  text-align: center;
+}
+
+#submit {
+  width: 120px;
+  margin-left: 129px;
+  height: 6vh;
+}
