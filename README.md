@@ -17,12 +17,12 @@ The purpose of this project is start using APIS.
 ## Getting Started 
 
 - Run git clone on this project at the desired directory:
-
+     ```
     git clone https://github.com/ivaan1992/Leaderboard.git
+     ```
+- Run `npm install` to install the necessary packages to run locally.
 
-- Run npm install to install the necessary packages to run locally.
-
-- After installing, run npm start and your default browser will open the webpage. 
+- After installing, run `npm start` and your default browser will open the webpage. 
 
 ## Authors
 
