@@ -1,5 +1,4 @@
-![](./assets/screenshot0)
-
+![](https://img.shields.io/badge/Microverse-blueviolet)
 # Leaderboard
 
 This is a project created with JavaScript.  
