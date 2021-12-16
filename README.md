@@ -14,7 +14,7 @@ The purpose of this project is start using APIS.
 - Webpack
 - JavaScript
 
-##Getting Started 
+## Getting Started 
 
 - Run git clone on this project at the desired directory:
 
