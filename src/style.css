@@ -1,6 +1,37 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+header {
+  margin-bottom: 100px;
+}
+
+.score {
+  width: 20%;
+}
+
+#refresh {
+  height: 5vh;
+  width: 30%;
+  margin-left: 50px;
+}
+
+#form {
+  margin-left: 250px;
+}
+
+input {
+  margin-bottom: 25px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+h3 {
+  text-align: center;
+}
+
+#submit {
+  width: 100px;
+  margin-left: 150px;
+  height: 4vh;
+}
