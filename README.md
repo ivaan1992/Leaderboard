@@ -4,7 +4,7 @@
 
 This is a project created with JavaScript.  
 
-![screenshot](https://user-images.githubusercontent.com/73128809/143690310-691b7260-aab0-4166-b865-7c803468dd54.png)
+![screenshot](https://user-images.githubusercontent.com/73128809/146416418-8d3742fb-456d-4720-8f7f-b0add7ced37a.png)
 
 The purpose of this project is start using APIS. 
 ## Built With
