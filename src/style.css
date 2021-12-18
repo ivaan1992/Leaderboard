@@ -1,5 +1,11 @@
 @import 'toastr';
 
+header {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 90px;
+}
+
 #form {
   margin-left: 400px;
 }
@@ -11,13 +17,15 @@
 input {
   margin-bottom: 20px;
   border-radius: 5px;
+  height: 4vh;
+  border: 1px solid black;
 }
 
 .refresh-button {
   margin-left: 100px;
 }
 
-#submit {
+.score-submit-button {
   width: 100px;
   margin-left: 150px;
 }
@@ -34,4 +42,17 @@ main {
 
 #game {
   margin-top: 50px;
+}
+
+.game-button {
+  width: 100px;
+  margin-left: 150px;
+}
+
+li {
+  list-style-type: none;
+  background-color: #fbc109;
+  margin-right: 150px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
