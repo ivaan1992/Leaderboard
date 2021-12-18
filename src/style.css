@@ -1,38 +1,29 @@
-* {
-  margin-left: 16px;
-  box-sizing: border-box;
-}
-
-header {
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-.score {
-  width: 50vh;
-}
-
-#refresh {
-  width: 100px;
-}
+@import 'toastr';
 
 #form {
-  margin-left: 250px;
+  margin-left: 400px;
+}
+
+#form h3 {
+text-align: center;
 }
 
 input {
-  margin-bottom: 25px;
-  width: 250px;
-  height: 5vh;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 
-h3 {
-  text-align: center;
+#refresh {
+  margin-left: 80px;
 }
 
 #submit {
-  width: 120px;
-  margin-left: 129px;
-  height: 6vh;
+  width: 100px;
+  margin-left: 150px;
+}
+
+main {
+  flex-direction: column;
+  max-width: 90%;
+  margin: auto;
 }

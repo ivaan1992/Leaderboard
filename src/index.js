@@ -1,70 +1,85 @@
 import './style.css';
+import routes from './routes';
+import request from './fetch';
+import toastr from 'toastr';
 
-const ID = 'Zl4d7IVkemOTTVg2fUdz';
-const URL = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/`;
-const refresh = document.getElementById('refresh');
-const scores = document.getElementById('score');
-const name = document.getElementById('input-name');
-const Score = document.getElementById('input-score');
-const API = document.getElementById('submit');
 
-const transformData = (data) => {
-    data.forEach((result) => {
-        const { user, score } = result;
-        const tr = document.createElement('tr');
-        const TName = document.createElement('td');
-        const TScore = document.createElement('td');
-        TName.scope = 'row';
-        TScore.scope = 'row';
+const refresh = document.querySelector('.refresh-button');
+const score = document.querySelector('.score-submit-button');
+const game = document.querySelector('.game-button')
+let gameID;
 
-        TName.innerHTML = user;
-        TScore.innerHTML = score;
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}
 
-        scores.appendChild(tr);
-        tr.appendChild(TName);
-        tr.appendChild(TScore);
-    });
-};
+game.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const gameForm = document.querySelector('#game');
+    const name = document.querySelector('.game-name').value;
+    const response = await request(routes.game ,{
+        method: 'POST',
+        body: JSON.stringify({name})
+    })
+    const {result}= await response.json()
+    gameID = result.split(' ')[3];
+    gameForm.remove()
 
-const getScore = async () => {
-    try {
-        const response = await fetch(URL);
-        const data = await response.json();
-        const { result } = data;
-        transformData(result);
-    } catch (error) {
-        throw new Error ('Please check the API');
-    }
-};
+    toastr.success(result)
+})
 
-const postRequest = async () => {
-    if(name.value && Score.value) {
-        try {
-            await fetch(URL, {
-              method: 'POST',
-              body: JSON.stringify({
-                user: name.value,
-                score: Score.value,
-              }),
-              headers: {
-                  'Content-type': 'application/json; charset=UTF-8',
-              },
-            });
-            Score.value = '';
-            name.value = '';
-            window.location.reload();
-        } catch (error) {
-            throw new Error('Please check POST API Method');
-        }
-    }
-};
+refresh.addEventListener('click', async (e) => {
+    e.preventDefault()
+    const ul = document.querySelector('#score-list')
+    if(gameID == null) return;
 
-document.addEventListener('DOMContentLoaded', () => {
-    getScore();
+    const response = await request(routes.scores(gameID) ,{
+        method: 'GET',
+    })
+    const {result} = await response.json()
+    const scoresHTML = result.map(({user, score}) => `
+        <li class="user">
+            ${user} ${score}
+        </li>
+    `).join('')
+
+    ul.innerHTML = scoresHTML;
 });
 
-API.addEventListener('click', postRequest);
+score.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const user = document.querySelector('#input-name').value
+    const score = document.querySelector('#input-score').value
 
-refresh.addEventListener('click', () => {
-    window.location.reload();
-});
+
+    const response = await request(routes.scores(gameID) ,{
+        method: 'POST',
+        body: JSON.stringify({
+            user,
+            score
+        })
+    })
+    const {result}= await response.json()
+    toastr.success(result)
+})
+
+
+
+
+
+
+
