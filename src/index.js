@@ -35,7 +35,7 @@ game.addEventListener('click', async (e) => {
     body: JSON.stringify({ name }),
   });
   const { result } = await response.json();
-  gameID = result.split(' ')[''];
+  gameID = result.split(' ').find((str, index) => index === 3);
   gameForm.remove();
 
   toastr.success(result);
