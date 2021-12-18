@@ -6,7 +6,6 @@ import toastr from 'toastr';
 
 const refresh = document.querySelector('.refresh-button');
 const score = document.querySelector('.score-submit-button');
-const game = document.querySelector('.game-button')
 let gameID;
 
 toastr.options = {
@@ -41,6 +40,7 @@ game.addEventListener('click', async (e) => {
 
     toastr.success(result)
 })
+
 
 refresh.addEventListener('click', async (e) => {
     e.preventDefault()

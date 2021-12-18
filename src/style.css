@@ -13,8 +13,8 @@ input {
   border-radius: 5px;
 }
 
-#refresh {
-  margin-left: 80px;
+.refresh-button {
+  margin-left: 100px;
 }
 
 #submit {
@@ -23,7 +23,15 @@ input {
 }
 
 main {
-  flex-direction: column;
+ display: flex;
   max-width: 90%;
   margin: auto;
+}
+
+#games {
+  margin-left: 200px;
+}
+
+#game {
+  margin-top: 50px;
 }
