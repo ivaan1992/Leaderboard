@@ -1,7 +1,7 @@
 import './style.css';
 import toastr from 'toastr';
-import routes from './routes';
-import request from './fetch';
+import routes from './routes.js';
+import request from './fetch.js';
 
 const refresh = document.querySelector('.refresh-button');
 const score = document.querySelector('.score-submit-button');
