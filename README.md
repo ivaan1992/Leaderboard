@@ -13,13 +13,6 @@ The purpose of this project is start using APIS.
 - Css
 - Webpack
 - JavaScript
-
-
-## Live Demo
-
-
-[Live Demo Link]
-
 ## Getting Started 
 
 - Run git clone on this project at the desired directory:
